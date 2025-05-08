@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class app2 {
+public class ap2 {
 
     // Méthode pour lire un entier strictement positif >= 10
     public static int lectureN() {

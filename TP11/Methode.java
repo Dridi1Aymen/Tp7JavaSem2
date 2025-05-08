@@ -163,5 +163,30 @@ public class Methode {
         }return nb;
         
     }
+    //fonction somme qui fournit la somme des valeurs d'un tableau de reels de taille quelconque
+    public static double somme(double[] tab) {
+        double s = 0;
+        for (int i = 0; i < tab.length; i++) {
+            s =s + tab[i];
+        }
+        return s;
+    }
+
+    //fonction incremente d'une valeur donneé toutes les valeurs d'un tableau de reels
+    public static void incremente(double[] tab, double x) {
+        for (int i = 0; i < tab.length; i++) {
+            tab[i] = tab[i] + x;
+        }
+    }
+    //fonction affiche le tableau de reels
+    public static void affiche(double[] tab) {
+        for (int i = 0; i < tab.length; i++) {
+            System.out.print(tab[i] + " ");
+        }
+        System.out.println();
+    }
+
+
+
 
 }
