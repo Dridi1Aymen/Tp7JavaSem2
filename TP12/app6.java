@@ -6,6 +6,7 @@ public class app6 {
         Scanner sc = new Scanner(System.in);
         System.out.println("entrer n ");
         int n = sc.nextInt();
+        
         if (n <= 0) {
             return Lecture();
         } else {

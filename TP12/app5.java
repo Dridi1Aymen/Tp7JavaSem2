@@ -7,6 +7,10 @@ public class app5 {
         do {
             System.out.print("Entrez une chaîne de caractères (max 50): ");
             ch = scanner.nextLine();
+            while(!scanner.hasNextInt()){
+                System.out.println("Erreur : veuillez entrer un entier valide.");
+                scanner.next();
+            }
             if (ch.length() > 50) {
                 System.out.println("La chaîne est trop longue. Veuillez réessayer.");
             }

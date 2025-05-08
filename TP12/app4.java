@@ -8,10 +8,13 @@ public class app4 {
         do {
             System.out.print("Entrez une chaîne (max 30 caractères): ");
             ch = sc.nextLine();
+            while(!sc.hasNextInt()){
+                System.out.println("Erreur : veuillez entrer un entier valide.");
+                sc.next();
+            }
         } while (ch.length() > 30);
         return ch;
     }
-
     static boolean Palindrome_rec(String ch, int debut, int fin) {
         if (debut >= fin) {
             return true;
