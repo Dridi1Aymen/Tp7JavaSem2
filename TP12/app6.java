@@ -4,16 +4,19 @@ import java.util.Scanner;
 public class app6 {
     static int Lecture() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("entrer n ");
-        int n = sc.nextInt();
-        
-        if (n <= 0) {
-            return Lecture();
-        } else {
-            return n;
-
-        }
-
+        int n ;
+        do {
+            System.out.println("entrez un entier strictement positif  :");
+            while (!sc.hasNextInt()) {
+                System.out.println("Erreur : veuillez entrer un entier valide.");
+                sc.next();
+            }
+            n = sc.nextInt();
+            if (n <= 0) {
+                System.out.println("Erreur : L'entier doit etre strictement positif .");
+            }
+        } while (n <= 0);
+        return n;
     }
 
     static void RemplirTab(int[] tab, int n, int i) {
@@ -27,7 +30,10 @@ public class app6 {
     }
 
     static int SommeTab_rec(int[] tab, int n) {
-        return (n < 0) ? 0 : tab[n] + SommeTab_rec(tab, n - 1);
+        if (n == 0) {
+            return tab[0];
+        }
+        return tab[n] + SommeTab_rec(tab, n - 1);
 
     }
 
